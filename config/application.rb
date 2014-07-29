@@ -1,6 +1,13 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
+# Non-DB app config START
+# require 'rails/all'
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "active_resource/railtie"
+require "rails/test_unit/railtie"
+require "sprockets/railtie"
+# Non-DB app config END
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -51,7 +58,9 @@ module Bts
     # This will create an empty whitelist of attributes available for mass-assignment for all models
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
     # parameters by using an attr_accessible or attr_protected declaration.
-    config.active_record.whitelist_attributes = true
+    # Non-DB app config START
+    # config.active_record.whitelist_attributes = true
+    # Non-DB app config END
 
     # Enable the asset pipeline
     config.assets.enabled = true
