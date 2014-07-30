@@ -4,9 +4,11 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+//= depend_on_asset "bg2.jpg"
+
 body {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('../assets/bg2.jpg') no-repeat center center fixed;
+    background: url('<%= asset_path('bg2.jpg') %>') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
