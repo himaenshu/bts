@@ -39,3 +39,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'rails_12factor', group: :production
+
+ruby "1.9.3"
